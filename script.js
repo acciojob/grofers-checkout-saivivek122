@@ -3,10 +3,11 @@ let table=document.getElementById("table");
 let prices=document.querySelectorAll(".price")
 getSumBtn.append("Get Total Price");
 document.body.appendChild(getSumBtn);
-let sum=0;
+
 
 const getSum = () => {
 //Add your code here
+	let sum=0;
 	for(let i=0;i<prices.length;i++){
 	let price=parseInt(prices[i].textContent);
 	sum=sum+price;
@@ -16,6 +17,7 @@ const getSum = () => {
 	let td2=tr.insertCell(1);
 	td1.textContent="total"
 	td2.textContent=sum;
+	td2.id="ans"
 	
 	
   
